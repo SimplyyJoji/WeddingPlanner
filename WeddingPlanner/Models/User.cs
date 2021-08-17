@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -35,5 +36,6 @@ namespace WeddingPlanner.Models
         public string PasswordConfirm { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        public List <Wedding> WeddingUsers { get; set; }
     }
 }

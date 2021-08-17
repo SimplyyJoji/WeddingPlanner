@@ -10,5 +10,6 @@ namespace WeddingPlanner.Models
         // the names of these properties will be the names of the tables in the db
         public DbSet<Wedding> Weddings { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<WeddingPlan> WeddingPlans { get; set; }
     }
     }
