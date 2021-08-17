@@ -11,12 +11,12 @@ namespace WeddingPlanner.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private UserWeddingContext db;
+        public HomeController(UserWeddingContext context)
         {
-            _logger = logger;
+            db = context;
         }
+
 
         public IActionResult Index()
         {
