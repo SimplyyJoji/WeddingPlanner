@@ -19,11 +19,8 @@ namespace WeddingPlanner.Models
         [Display(Name = "Name Two")]
         public string NameTwo { get; set; }
 
-        [Required(ErrorMessage = "is required.")]
-        [Display(Name = "Name Two")]
-
         [DataType(DataType.Date)]
-        public DataType Date { get; set; }
+        public DataType? Date { get; set; }
 
         [Required(ErrorMessage = "is required.")]
         [MinLength(2, ErrorMessage = "must be at least 2 characters")]

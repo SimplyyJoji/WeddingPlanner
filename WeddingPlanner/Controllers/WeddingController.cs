@@ -19,7 +19,7 @@ namespace WeddingPlanner.Controllers
         {
             return View("New");
         }
-
+    //Create() talks to form asp-action make sure its the same
         [HttpPost("/weddings/create")]
         public IActionResult Create(Wedding newWedding)
         {
@@ -31,16 +31,17 @@ namespace WeddingPlanner.Controllers
             }
 
             // If any above custom errors were added, ModelState would now be invalid.
+
+            HttpContext.Session.SetInt32("WeddingId", newWedding.WeddingId);
+            // HttpContext.Session.SetString("NameOne", newWedding.NameOne);
         
             db.Weddings.Add(newWedding);
             db.SaveChanges();
 
-            HttpContext.Session.SetInt32("WeddingId", newWedding.WeddingId);
-            HttpContext.Session.SetString("NameOne", newWedding.NameOne);
-            return RedirectToAction("Dashboard");
+            return RedirectToAction("Dashboard", "Wedding");
         }
 
-        [HttpGet("/dashboard")]
+        [HttpGet("/Dashboard")]
         public IActionResult Dashboard()
         {
             List<Wedding> allWeddings = db.Weddings.ToList();
