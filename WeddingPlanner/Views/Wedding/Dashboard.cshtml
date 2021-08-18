@@ -7,6 +7,21 @@
   <div class="row">
     <div class="col">
       <h1>Welcome to the Wedding Dashboard</h1>
+
+      <table style="width:100%">
+        <tr>
+          <th>Wedding Names</th>
+          <th>Date</th>
+          <th>Address</th>
+        </tr>
+        <tr>
+        @foreach (Wedding wedding in Model)
+        {
+          <td> @wedding.NameOne @wedding.NameTwo</td>
+          <td> @wedding.Date</td>
+          <td> @wedding.Address</td>
+        }
+</table>
     </div>
   </div>
 </div>
