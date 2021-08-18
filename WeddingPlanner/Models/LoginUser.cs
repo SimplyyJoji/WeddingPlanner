@@ -18,4 +18,4 @@ namespace WeddingPlanner.Models
         [Display(Name = "Password")]
         public string LoginPassword { get; set; }
     }
-    }
+}

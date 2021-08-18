@@ -57,3 +57,7 @@
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/WeddingPlanner.dll
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/WeddingPlanner.pdb
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/WeddingPlanner.genruntimeconfig.cache
+/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Home/_Login.cshtml.g.cs
+/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Home/_Register.cshtml.g.cs
+/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Wedding/Dashboard.cshtml.g.cs
+/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Wedding/New.cshtml.g.cs

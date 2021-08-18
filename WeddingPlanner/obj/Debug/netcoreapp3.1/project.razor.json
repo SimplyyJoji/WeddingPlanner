@@ -14402,13 +14402,28 @@
   "RootNamespace": "WeddingPlanner",
   "Documents": [
     {
+      "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/Views/Wedding/New.cshtml",
+      "TargetPath": "Views\\Wedding\\New.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/Views/Wedding/Dashboard.cshtml",
+      "TargetPath": "Views\\Wedding\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/Views/Home/_Register.cshtml",
+      "TargetPath": "Views\\Home\\_Register.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14432,8 +14447,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/Views/Wedding/All.cshtml",
+      "TargetPath": "Views\\Wedding\\All.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/Views/Home/_Login.cshtml",
+      "TargetPath": "Views\\Home\\_Login.cshtml",
       "FileKind": "mvc"
     }
   ],
