@@ -90,11 +90,8 @@ namespace WeddingPlanner.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int?>("CreatedByUserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Date")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("NameOne")
                         .IsRequired()
@@ -107,9 +104,12 @@ namespace WeddingPlanner.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("WeddingId");
 
-                    b.HasIndex("CreatedByUserId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Weddings");
                 });
@@ -133,7 +133,9 @@ namespace WeddingPlanner.Migrations
                 {
                     b.HasOne("WeddingPlanner.Models.User", "CreatedBy")
                         .WithMany("WeddingUsers")
-                        .HasForeignKey("CreatedByUserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

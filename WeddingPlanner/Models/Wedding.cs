@@ -19,8 +19,10 @@ namespace WeddingPlanner.Models
         [Display(Name = "Name Two")]
         public string NameTwo { get; set; }
 
+        [Required(ErrorMessage = "is required.")]
+        [Display(Name = "Trip Date")]
         [DataType(DataType.Date)]
-        public DataType? Date { get; set; }
+        public DateTime Date { get; set; }
 
         [Required(ErrorMessage = "is required.")]
         [MinLength(2, ErrorMessage = "must be at least 2 characters")]
@@ -30,6 +32,9 @@ namespace WeddingPlanner.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
+
+
+        public int UserId { get; set; }
         public User CreatedBy { get; set; }
     }
     }

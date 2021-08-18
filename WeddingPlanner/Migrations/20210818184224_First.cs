@@ -34,21 +34,21 @@ namespace WeddingPlanner.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NameOne = table.Column<string>(nullable: false),
                     NameTwo = table.Column<string>(nullable: false),
-                    Date = table.Column<int>(nullable: false),
+                    Date = table.Column<DateTime>(nullable: false),
                     Address = table.Column<string>(nullable: false),
                     CreatedAt = table.Column<DateTime>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false),
-                    CreatedByUserId = table.Column<int>(nullable: true)
+                    UserId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Weddings", x => x.WeddingId);
                     table.ForeignKey(
-                        name: "FK_Weddings_Users_CreatedByUserId",
-                        column: x => x.CreatedByUserId,
+                        name: "FK_Weddings_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "UserId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -57,10 +57,10 @@ namespace WeddingPlanner.Migrations
                 {
                     RsvpId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    UserId = table.Column<int>(nullable: false),
-                    WeddingId = table.Column<int>(nullable: false),
                     CreatedAt = table.Column<DateTime>(nullable: false),
-                    UpdatedAt = table.Column<DateTime>(nullable: false)
+                    UpdatedAt = table.Column<DateTime>(nullable: false),
+                    UserId = table.Column<int>(nullable: false),
+                    WeddingId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -90,9 +90,9 @@ namespace WeddingPlanner.Migrations
                 column: "WeddingId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Weddings_CreatedByUserId",
+                name: "IX_Weddings_UserId",
                 table: "Weddings",
-                column: "CreatedByUserId");
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

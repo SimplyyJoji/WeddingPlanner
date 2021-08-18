@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WeddingPlanner.Models;
 
+
 namespace WeddingPlanner.Controllers
 {
     public class HomeController : Controller
@@ -51,11 +52,6 @@ namespace WeddingPlanner.Controllers
                 {
                     ModelState.AddModelError("Email", "is taken.");
                 }
-                /* We could add more custom errors */
-                // if (newUser.FirstName == "Lawrence")
-                // {
-                //     ModelState.AddModelError("FirstName", "Sorry, no Lawrences allowed.");
-                // }
             }
 
             // If any above custom errors were added, ModelState would now be invalid.
@@ -73,7 +69,7 @@ namespace WeddingPlanner.Controllers
 
             HttpContext.Session.SetInt32("UserId", newUser.UserId);
             HttpContext.Session.SetString("FirstName", newUser.FirstName);
-            return RedirectToAction("new", "weddings");
+            return RedirectToAction("Index");
         }
 
         [HttpPost("/login")]

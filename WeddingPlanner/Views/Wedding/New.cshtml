@@ -1,4 +1,5 @@
 @model Wedding
+
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -13,7 +14,6 @@
     </div>
   </div>
 </div>
-
 <form asp-controller="Wedding" asp-action="Create" method="POST">
   <div class="form-group">
     <label asp-for="NameOne"></label>
