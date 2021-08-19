@@ -14,11 +14,12 @@
   </div>
   <div class="card-body">
     <h3>RSVPs</h3>
-    @foreach (Rsvps rsvp in Model.UserRsvps)
+    @foreach (Rsvp rsvp in Model.Rsvps)
     {
       @* Doing it manually will leave a trailing ", " at the end. *@
-      <span>@rsvp.User.FullName(), </span>
+      <span>@rsvp.CreatedBy.FullName(), </span>
     }
+
     @* <span>
       @String.Join(", ", Model.Rsvps.Select(rsvp => rsvp.User.FullName()))
     </span> *@
