@@ -105,9 +105,10 @@ namespace WeddingPlanner.Controllers
                 return RedirectToAction("Details");
             }
 
-            return View("Details", wedding);
-            
+            return View("Details", wedding);  
         }
+
+
 
         [HttpPost("/weddings/{weddingId}/like")]
         public IActionResult RSVP(int weddingId)

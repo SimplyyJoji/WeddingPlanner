@@ -21,7 +21,7 @@
         {
           bool alreadyRSVPd = wedding.Rsvps.Any(like => Context.Session.GetInt32("UserId") == like.UserId);
         <tr>
-          <td> <a asp-controller="Wedding" asp-action="Details" asp-route-userId="@wedding.WeddingId">@wedding.NameOne @wedding.NameTwo </a> </td>
+          <td> <a asp-controller="Wedding" asp-action="Details" asp-route-weddingId="@wedding.WeddingId">@wedding.NameOne + @wedding.NameTwo's Wedding </a> </td>
           <td> @wedding.Date</td>
           <td> @wedding.Address</td>
           <td>
