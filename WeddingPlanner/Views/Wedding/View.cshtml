@@ -1,3 +1,12 @@
-@model List<Wedding>
+@model Wedding
 
-<h2 class="text-center">All Posts</h2>
+@* @{
+  int? uid = Context.Session.GetInt32("UserId");
+  } *@
+
+<div class="card shadow rounded mx-auto mb-3">
+  <h4 class="card-title text-center bg-dark text-light py-2 rounded-top">
+    @Model.NameOne
+  </h4>
+
+</div>

@@ -89,6 +89,8 @@ namespace WeddingPlanner.Controllers
             if (!isLoggedIn) {
                 return RedirectToAction("Index", "Home");
             }
+
+            
             Wedding wedding = db.Weddings
                 .Include(wedding => wedding.CreatedBy)
                 .Include(wedding => wedding.Rsvps)
