@@ -13,13 +13,32 @@
           <th>Wedding Names</th>
           <th>Date</th>
           <th>Address</th>
+          <th>RSVP</th>
+          <th>Count</th>
         </tr>
-        <tr>
+        
         @foreach (Wedding wedding in Model)
         {
+          bool alreadyRSVPd = wedding.Rsvps.Any(like => Context.Session.GetInt32("UserId") == like.UserId);
+        <tr>
           <td> @wedding.NameOne @wedding.NameTwo</td>
           <td> @wedding.Date</td>
           <td> @wedding.Address</td>
+          <td>
+          <form asp-controller="Wedding" asp-action="RSVP" asp-route-weddingId="@wedding.WeddingId" class="float-start">
+          @if (alreadyRSVPd)
+          {
+            @* Thumbs up icon. *@
+            <button class="btn btn-outline-danger m-3">Un-RSVP</button>
+          }
+          else
+          {
+            <button class="btn btn-outline-success m-3">RSVP</button> 
+          }
+      </form>
+      </td>
+      <td><span>(@wedding.Rsvps.Count)</span></td>
+        </tr>
         }
 </table>
     </div>

@@ -9,7 +9,7 @@ using WeddingPlanner.Models;
 namespace WeddingPlanner.Migrations
 {
     [DbContext(typeof(UserWeddingContext))]
-    [Migration("20210818184224_First")]
+    [Migration("20210818234054_First")]
     partial class First
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -119,13 +119,13 @@ namespace WeddingPlanner.Migrations
             modelBuilder.Entity("WeddingPlanner.Models.Rsvp", b =>
                 {
                     b.HasOne("WeddingPlanner.Models.User", "CreatedBy")
-                        .WithMany()
+                        .WithMany("Rsvps")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WeddingPlanner.Models.Wedding", "Wedding")
-                        .WithMany()
+                    b.HasOne("WeddingPlanner.Models.Wedding", "Weddings")
+                        .WithMany("Rsvps")
                         .HasForeignKey("WeddingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -134,7 +134,7 @@ namespace WeddingPlanner.Migrations
             modelBuilder.Entity("WeddingPlanner.Models.Wedding", b =>
                 {
                     b.HasOne("WeddingPlanner.Models.User", "CreatedBy")
-                        .WithMany("WeddingUsers")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

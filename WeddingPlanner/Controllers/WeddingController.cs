@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WeddingPlanner.Models;
 
 namespace WeddingPlanner.Controllers
@@ -73,8 +74,68 @@ namespace WeddingPlanner.Controllers
                 return RedirectToAction("Index", "Home");
             }
             
-            List<Wedding> allWeddings = db.Weddings.ToList();
+            List<Wedding> allWeddings = db.Weddings
+
+                .Include(wedding => wedding.CreatedBy) // hover over the param to see it's data type
+                
+                .Include(wedding => wedding.Rsvps)
+                .ToList();
             return View("Dashboard", allWeddings);
+        }
+
+        [HttpGet("/View/{weddingId}")]
+        public IActionResult ViewWedding(int weddingId)
+        {
+            if (!isLoggedIn) {
+                return RedirectToAction("Index", "Home");
+            }
+            Wedding wedding = db.Weddings
+                .Include(wedding => wedding.CreatedBy)
+                .Include(wedding => wedding.Rsvps)
+                // Include something from the last thing that was included.
+                // Include the User from the likes (hover over like param to see data type)
+                .ThenInclude(rsvp => rsvp.CreatedBy)
+                .FirstOrDefault(w => w.WeddingId == weddingId);
+
+
+            if (wedding == null)
+            {
+                return RedirectToAction("All");
+            }
+
+            return View("Details", wedding);
+            
+        }
+
+        [HttpPost("/weddings/{weddingId}/like")]
+        public IActionResult RSVP(int weddingId)
+        {
+            if (!isLoggedIn)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            Rsvp existingRsvp = db.UserRsvps
+                .FirstOrDefault(rsvp => rsvp.UserId == (int)uid && rsvp.WeddingId == weddingId);
+
+            if (existingRsvp == null)
+            {
+                Rsvp rsvp = new Rsvp()
+                {
+                    WeddingId = weddingId,
+                    UserId = (int)uid
+                };
+
+                db.UserRsvps.Add(rsvp);
+            }
+            else
+            {
+                db.UserRsvps.Remove(existingRsvp);
+            }
+
+
+            db.SaveChanges();
+            return RedirectToAction("Dashboard");
         }
 
     }
