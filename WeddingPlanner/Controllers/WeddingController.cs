@@ -83,14 +83,14 @@ namespace WeddingPlanner.Controllers
             return View("Dashboard", allWeddings);
         }
 
-        [HttpGet("/View/{weddingId}")]
-        public IActionResult ViewWedding(int weddingId)
+        [HttpGet("/weddings/{weddingId}")]
+        public IActionResult Details(int weddingId)
         {
             if (!isLoggedIn) {
                 return RedirectToAction("Index", "Home");
             }
 
-            
+
             Wedding wedding = db.Weddings
                 .Include(wedding => wedding.CreatedBy)
                 .Include(wedding => wedding.Rsvps)
@@ -102,7 +102,7 @@ namespace WeddingPlanner.Controllers
 
             if (wedding == null)
             {
-                return RedirectToAction("All");
+                return RedirectToAction("Details");
             }
 
             return View("Details", wedding);

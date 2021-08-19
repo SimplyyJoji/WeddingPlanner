@@ -61,4 +61,4 @@
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Home/_Register.cshtml.g.cs
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Wedding/New.cshtml.g.cs
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Wedding/Dashboard.cshtml.g.cs
-/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Wedding/View.cshtml.g.cs
+/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Wedding/Details.cshtml.g.cs
