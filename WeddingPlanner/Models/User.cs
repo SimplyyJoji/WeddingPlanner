@@ -37,5 +37,10 @@ namespace WeddingPlanner.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
         public List <Rsvp> Rsvps { get; set; }
+
+        public string FullName()
+        {
+            return FirstName + " " + LastName;
+        }
     }
 }

@@ -6,7 +6,23 @@
 
 <div class="card shadow rounded mx-auto mb-3">
   <h4 class="card-title text-center bg-dark text-light py-2 rounded-top">
-    @Model.NameOne
+    @Model.NameOne + @Model.NameTwo's Wedding
   </h4>
+  <div class="card-body">
+    <p class="card-text">@Model.Date</p>
+    <small class="text-muted">Submitted on: @Model.CreatedAt</small>
+  </div>
+  <div class="card-body">
+    <h3>RSVPs</h3>
+    @foreach (Rsvps rsvp in Model.UserRsvps)
+    {
+      @* Doing it manually will leave a trailing ", " at the end. *@
+      <span>@rsvp.User.FullName(), </span>
+    }
+    @* <span>
+      @String.Join(", ", Model.Rsvps.Select(rsvp => rsvp.User.FullName()))
+    </span> *@
+  </div>
+  
 
 </div>
