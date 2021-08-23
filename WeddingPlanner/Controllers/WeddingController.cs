@@ -111,7 +111,7 @@ namespace WeddingPlanner.Controllers
 
 
         [HttpPost("/weddings/{weddingId}/like")]
-        public IActionResult RSVP(int weddingId)
+        public IActionResult Rsvp(int weddingId)
         {
             if (!isLoggedIn)
             {
