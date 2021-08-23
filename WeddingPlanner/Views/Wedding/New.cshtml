@@ -3,18 +3,16 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
+<h1 class="pt-5 text-center" >Welcome to the Wedding Planner</h1>
 <div class="container">
   <div class="row">
     <div class="col-6">
-      <h1>Welcome to the Wedding Planner</h1>
+      
     </div>
-    <div class="col-6">
-      <a href="/addWedding">New Wedding</a>
-    </div>
+ 
   </div>
 </div>
-<form asp-controller="Wedding" asp-action="Create" method="POST">
+<form class="pt-5 " asp-controller="Wedding" asp-action="Create" method="POST">
   <div class="form-group">
     <label asp-for="NameOne"></label>
     <span asp-validation-for="NameOne" class="text-danger font-weight-bold"></span>

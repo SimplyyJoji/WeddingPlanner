@@ -7,25 +7,28 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Welcome to the Wedding Dashboard</h1>
+      <h1 class="text-center pt-3">Welcome to the Wedding Dashboard</h1>
+    <div class="col-6">
+      <a class="p-5 pb-5" href="/Weddings/new">New Wedding</a>
+    </div>
 
-      <table style="width:100%">
+      <table style="width:100%" class="pt-5 table-striped table-bordered p-4">
         <tr>
-          <th>Wedding Names</th>
-          <th>Date</th>
-          <th>Address</th>
-          <th>RSVP</th>
-          <th>Count</th>
+          <th class="text-center">Wedding Names</th>
+          <th class="text-center">Date</th>
+          <th class="text-center">Address</th>
+          <th class="text-center">RSVP</th>
+          <th class="text-center">Count</th>
         </tr>
         
         @foreach (Wedding wedding in Model)
         {
           bool alreadyRSVPd = wedding.Rsvps.Any(like => Context.Session.GetInt32("UserId") == like.UserId);
         <tr>
-          <td> <a asp-controller="Wedding" asp-action="Details" asp-route-weddingId="@wedding.WeddingId">@wedding.NameOne + @wedding.NameTwo's Wedding </a> </td>
-          <td> @wedding.Date</td>
-          <td> @wedding.Address</td>
-          <td>
+          <td class="text-center"> <a asp-controller="Wedding" asp-action="Details" asp-route-weddingId="@wedding.WeddingId">@wedding.NameOne + @wedding.NameTwo's Wedding </a> </td>
+          <td class="text-center"> @wedding.Date</td>
+          <td class="text-center"> @wedding.Address</td>
+          <td class="text-center">
           <form asp-controller="Wedding" asp-action="RSVP" asp-route-weddingId="@wedding.WeddingId" class="float-start">
           @if (alreadyRSVPd)
           {
@@ -38,7 +41,7 @@
           }
       </form>
       </td>
-      <td><span>(@wedding.Rsvps.Count)</span></td>
+      <td class="text-center"><span>(@wedding.Rsvps.Count)</span></td>
         </tr>
         }
 </table>
