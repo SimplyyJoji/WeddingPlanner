@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aMKhM2/Pb5RWXovbpAAfcTMJZcV6QzepVjnDqUeO5gJPUz47OwtYQmPdMAkU87KOmv2EzvSpfhFdgZ82UBcX7w==",
+  "dgSpecHash": "oOd35zHFUnK0J+c4qJU4prRlHZiitF0eUV7C/JyEDZxf+mz62a11R0t2Dec/gxgkfYPcwqOb3QUB6eNQdobBrQ==",
   "success": true,
   "projectFilePath": "/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/WeddingPlanner.csproj",
   "expectedPackageFiles": [
@@ -29,7 +29,8 @@
     "/Users/javanogden/.nuget/packages/pomelo.jsonobject/2.2.1/pomelo.jsonobject.2.2.1.nupkg.sha512",
     "/Users/javanogden/.nuget/packages/system.collections.immutable/1.7.1/system.collections.immutable.1.7.1.nupkg.sha512",
     "/Users/javanogden/.nuget/packages/system.componentmodel.annotations/4.7.0/system.componentmodel.annotations.4.7.0.nupkg.sha512",
-    "/Users/javanogden/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    "/Users/javanogden/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "/Users/javanogden/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

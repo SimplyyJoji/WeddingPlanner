@@ -106,7 +106,7 @@ namespace WeddingPlanner.Controllers
 
             HttpContext.Session.SetInt32("UserId", dbUser.UserId);
             HttpContext.Session.SetString("FirstName", dbUser.FirstName);
-            return RedirectToAction("new", "weddings");
+            return RedirectToAction("Dashboard", "Wedding");
         }
 
         [HttpPost("/logout")]

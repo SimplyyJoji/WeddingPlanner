@@ -1,6 +1,5 @@
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/bin/Debug/netcoreapp3.1/appsettings.json
-/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/bin/Debug/netcoreapp3.1/WeddingPlanner.deps.json
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/bin/Debug/netcoreapp3.1/WeddingPlanner.runtimeconfig.json
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/bin/Debug/netcoreapp3.1/WeddingPlanner.runtimeconfig.dev.json
@@ -31,7 +30,6 @@
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/bin/Debug/netcoreapp3.1/Pomelo.JsonObject.dll
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
-/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/WeddingPlanner.csprojAssemblyReference.cache
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/WeddingPlanner.AssemblyInfoInputs.cache
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/WeddingPlanner.AssemblyInfo.cs
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/WeddingPlanner.csproj.CoreCompileInputs.cache
@@ -62,3 +60,6 @@
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Wedding/Dashboard.cshtml.g.cs
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Wedding/Details.cshtml.g.cs
 /Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
+/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/WeddingPlanner.csproj.AssemblyReference.cache
+/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/WeddingPlanner.GeneratedMSBuildEditorConfig.editorconfig
+/Users/javanogden/Desktop/CodingDojo/cSharp/ORM/WeddingPlanner/WeddingPlanner/obj/Debug/netcoreapp3.1/scopedcss/bundle/WeddingPlanner.styles.css
